@@ -1,0 +1,36 @@
+#README
+##Project 2, Group 2
+##
+##20190315
+##
+##
+########install LDAP server########
+#The install-ldap-server script installs an ldap server
+#on the current machine, configures server, and allows 
+#for authentication.
+##
+#Script: 
+#    sets firewall rules to allow access on ports 389, 636.
+#    sets diradm to modify files without using vi.
+#    located as root, use ./install-ldap-server .
+##
+#Options:
+#    - h 
+#
+##
+##
+##
+########install-nfs-server########
+#The install-nfs-server script installs an nfs server 
+#on the current machine; allows clients server conection 
+#simultaneously, and access to same files.
+##
+#Script:
+#    sets firewall rules clients connect on ports 2049, 111, 20048.
+#    located as root, use ./install-nfs-server .
+##
+#Options:
+#    -h
+#
+##
+##
