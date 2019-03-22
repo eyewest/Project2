@@ -7,7 +7,11 @@
 #initiate help command
 if [ "$1" == "-h" ]; then echo "Usage: `basename $0` [Install NFS Server. Script is invoked using the following command: ./install-nfs-server]" ; exit 0 ; fi
 
-#Create /home partition
+#move /home contents to /tmp/oldhome
+mkdir /tmp/oldhome
+mv /home/* /tmp/oldhome
+
+#create /home partition
 echo -e "n\np\n4\n\n+5G\nw" | fdisk /dev/sda
 partprobe /dev/sda >> nfs-install.log
 mkfs.xfs /dev/sda4 >> nfs-install.log
@@ -16,6 +20,9 @@ xfs_repair /dev/sda4 >> nfs-install.log
 #add partition to fstab and mount it
 echo "/dev/sda4	/home	xfs	defaults	0 0" >> /etc/fstab
 mount /dev/sda4 >> nfs-install.log
+
+#move /tmp/oldhome contents back to /home
+mv /tmp/oldhome/* /home
 
 #edit /etc/exports
 echo "/home *.*.*.*(rw)" >> /etc/exports
