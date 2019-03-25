@@ -4,10 +4,22 @@
 ##20190315
 ##
 ##
+########automated server setup########
+#The server-setup script downloads the a2.tar.bz2 tarball,
+#extracts the two scripts detailed below, and runs them
+#without user interaction; manual install info is below.
+##
+#Script:
+#    creates directory for script activity, logs
+#    downloads and extracts a2.tar.bz2.
+#    located as root, use ./server-setup
+##
 ########install LDAP server########
 #The install-ldap-server script installs an ldap server
 #on the current machine, configures server, and allows 
 #for authentication.
+##
+##
 ##
 #Script: 
 #    sets firewall rules to allow access on ports 389, 636.
