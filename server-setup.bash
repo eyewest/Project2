@@ -5,8 +5,8 @@
 #CIT 470, Project 2
 
 #Make a directory for scripts, logs, etc. and change to directory
-mkdir server-install
-cd server-install
+mkdir server-setup
+cd server-setup
 
 #Download tarball and extract
 wget http://raw.githubusercontent.com/eyewest/Project2/master/a2.tar.bz2
