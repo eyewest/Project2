@@ -9,8 +9,8 @@ mkdir server-install
 cd server-install
 
 #Download tarball and extract
-wget http://raw.githubusercontent.com/eyewest/Project2/master/a2.tar.bz2 >> client-install.log
-tar xvf a2.tar.bz2 >> client-install.log
+wget http://raw.githubusercontent.com/eyewest/Project2/master/a2.tar.bz2
+tar xvf a2.tar.bz2
 
 #Change permissions of scripts and run
 chmod 744 install-nfs-server.bash install-ldap-server.bash
